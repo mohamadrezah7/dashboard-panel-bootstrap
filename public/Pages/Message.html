@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت | پیام ها</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/custom-style.css">
+    <link rel="stylesheet" href="../css/bootstrap.fa.min.css">
+
+
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../css/adminlte.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <link rel="stylesheet" href="../plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker-bs3.css">
+
+
+  <!-- bootstrap rtl -->
+  <link rel="stylesheet" href="../css/bootstrap-rtl.min.css">
+  
+  <link rel="stylesheet" href="../css/persian-datepicker.css"/>
+  
+  
+    
+    
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="85be87bd-602b-46de-8ae2-f877199d2e40";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md">
+    <button class="navbar-toggler nav-button1 mb-2" data-toggle="collapse" data-target="#mynav">
+      <div class="line1 bg-dark"></div>
+      <div class="line2 bg-dark"></div>
+      <div class="line3 bg-dark"></div>
+    </button>
+    <div class="navbar-collapse collapse" id="mynav">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                    <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top align-items-end">
+                        <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">Dashboard</a>       
+                        <div class="bottom-border pb-3">
+                            <img src="../images/avatar.png" class="rounded-circle ml-3 elevation-2" style="width: 50px;" alt="">
+                            <a class="text-white" href="./Profile-Page.html">محمدرضا حسینی</a>
+                        </div>
+                        <ul class="nav-bar list-unstyled flex-column mt-4">
+                            <li class="nav-item  user-select-none">
+                                <a href="../Pages/main-page.html" class="nav-link text-white p-3 mb-2 ">
+                                    <i class="fas fa-home fa-lg ml-3"></i>داشبورد
+                                </a>
+                            </li>
+                            <li class="nav-item sidebar-link ">
+                                <a href="../Pages/Profile-Page.html" class="nav-link text-white p-3 mb-2">
+                                    <i class="fas fa-user fa-lg ml-3"></i>پروفایل
+                                </a>
+                            </li>
+                            <li class="nav-item sidebar-link ">
+                              <a href="../Pages/chart.html" class="nav-link text-white p-3 mb-2">
+                                  <i class="fas fa-chart-bar fa-lg ml-3"></i>نمودار ها
+                              </a>
+                          </li>
+                          <li class="nav-item sidebar-link">
+                              <a href="../Pages/Tables.html" class="nav-link text-white p-3 mb-2">
+                                <i class="fas fa-table fa-lg ml-3"></i>جدول ها
+                              </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                              <a href="../Pages/Calender.html" class="nav-link text-white p-3 mb-2">
+                                <i class="far fa-calendar-alt fa-lg ml-3"></i>تقویم کاری
+                              </a>
+                            </li>
+                            <li class="nav-item sidebar-link current">
+                              <a href="#" class="nav-link text-white p-3 mb-2">
+                                  <i class="fas fa-envelope fa-lg ml-3"></i>پیام ها
+                              </a>
+                          </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="../Pages/Sales.html" class="nav-link text-white p-3 mb-2">
+                                    <i class="fas fa-shopping-cart fa-lg ml-3"></i>فروش
+                                </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="" class="nav-link text-white p-3 mb-2">
+                                    <i class="fas fa-wrench fa-lg ml-3"></i>تنظیمات
+                                </a>
+                            </li>
+                        </ul>
+                    </div>  
+                <!-- End of Sidebar -->
+
+                <!-- Topnav -->
+                    <div class="col-xl-10 col-lg-9 col-md-8 fixed-top mr-auto bg-dark py-2 top-navbar">
+                        <div class="row mb-0 mt-2">
+                            <div class="col-md-4 ">
+                                <h4 class="text-light"><span class="brand-h user-select-none">داشبورد</span></h4>
+                            </div>
+                            <div class="col-md-5">
+                                <form class="my-4 my-md-0" action="" >
+                                    <div class="input-group">
+                                        <button class="btn btn-white search-button">
+                                            <i class="fas fa-search text-danger"></i>
+                                        </button>
+                                        <input type="text" placeholder="جستجو..." class="form-control search-input text-white">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="navbar-nav flex-row justify-content-center">
+                                    <li class="nav-item px-4 px-md-0">
+                                        <a href="" class="nav-link ">
+                                            <i class="fas fa-comment fa-lg text-muted"></i>
+                                            <span class="badge badge-primary badg-bell1">12</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown px-4 px-md-0">
+                                        <a href="" class="nav-link" data-toggle="dropdown">
+                                            <i class="fas fa-bell fa-lg text-muted"></i>
+                                            <span class="badge badge-warning badg-bell1">15</span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-left ">
+                                          <span class="dropdown-item dropdown-header text-center text-dark p-3">15 نوتیفیکیشن</span>
+                                          <div class="dropdown-divider"></div>
+                                          <a href="#" class="dropdown-item">
+                                           <div class="text-right text-dark"> <i class="fa fa-envelope ml-2 fa-lg text-dark"></i> 4 پیام جدید</div>
+                                            <div class=" text-muted text-sm text-left" style="font-size: 12px;">3 دقیقه</div>
+                                          </a>
+                                          <div class="dropdown-divider"></div>
+                                          <a href="#" class="dropdown-item ">
+                                            <div class="text-right text-dark"><i class="fa fa-users ml-2 fa-lg text-dark"></i> 8 درخواست دوستی</div>
+                                            <div class=" text-muted text-sm text-left" style="font-size: 12px;">12 ساعت</div>
+                                          </a>
+                                          <div class="dropdown-divider"></div>
+                                          <a href="#" class="dropdown-item">
+                                            <div class="text-right text-dark"><i class="fa fa-file ml-2 fa-lg text-dark"></i> 3 گزارش جدید</div>
+                                            <div class=" text-muted text-sm text-left" style="font-size: 12px;">2 روز</div>
+                                          </a>
+                                          <div class="dropdown-divider"></div>
+                                          <div class="text-center my-1">
+                                          <button  class="btn btn-outline-secondary">مشاهده همه نوتیفیکیشن</button>
+                                          </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item mr-md-auto px-4 px-md-0 exit">
+                                        <a href="#logoutmodal" data-toggle="modal" class="nav-link">
+                                            <i class="fas fa-sign-out-alt fa-lg text-danger"></i>
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Topnav -->
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- End of Navigation -->
+
+<!-- Modal -->
+<div class="modal fade" id="logoutmodal" data-backdrop="static">
+    <div class="modal-dialog bg-black">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-dark">آیا میخاهید خارج شوید؟</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted">در صورت خروج ، برای دسترسی به پنل باید مجددا وارد شوید</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+                <a href="../index.html"><button id="logout-btn" class="btn btn-danger">خارج میشوم</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
+
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+            <h4 class="mt-5 pt-3 mr-2" style="font-family: yekan !important;">پیام ها</h4>
+          <div class="col-sm-6 text-right">
+            <ul class="breadcrumb bg-white">
+              <li class="breadcrumb-item"><a href="../Pages/main-page.html" class="text-muted text-decoration-none">داشبورد</a></li>
+              <li class="breadcrumb-item textd text-dark" style="font-family: yekan !important;">پیام ها</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <!-- Main content -->
+    <section >
+        <div class="container-fluid ">
+            <div class="row mr-1">
+                <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <!-- Widget: user widget style 2 -->
+                      <div class="card card-widget widget-user-2">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-info-gradient">
+                          <div class="widget-user-image">
+                            <img class="img-circle elevation-3" src="../images/avatar.png" alt="User Avatar">
+                          </div>
+                          <!-- /.widget-user-image -->
+                          <h3 class="widget-user-username ">محمدرضا حسینی</h3>
+                          <h5 class="widget-user-desc">مدیر پروژه</h5>
+                        </div>
+                        <div class="card-footer p-0">
+                          <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a href="#" class="nav-link text-dark">
+                                پروژه‌ها <span class="float-left badge badge-rounded p-2 bg-primary ">31</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link text-dark">
+                                وظایف <span class="float-left badge badge-rounded p-2 bg-warning">5</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link text-dark">
+                                پروژه‌های کامل شده <span class="float-left badge badge-rounded p-2 bg-success">12</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link text-dark">
+                                دنبال کنند‌ها <span class="float-left badge badge-rounded p-2 bg-danger">842</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /.widget-user -->
+                    </div>
+                  </div>
+                     <!-- DIRECT CHAT -->
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <!-- TO DO List -->
+                          <div class="card bg-secondary-gradient">
+                            <div class="card-header">
+                              <h3 class="card-title">
+                                <i class="ion ion-clipboard mr-1"></i>
+                                لیست کارها
+                              </h3>
+
+                              <div class="card-tools ">
+                                <ul class="pagination pagination-sm d-flex justify-content-end ">
+                                  <li class="page-item "><a href="#" class="page-link">&laquo;</a></li>
+                                  <li class="page-item "><a href="#" class="page-link">1</a></li>
+                                  <li class="page-item "><a href="#" class="page-link">2</a></li>
+                                  <li class="page-item "><a href="#" class="page-link">3</a></li>
+                                  <li class="page-item "><a href="#" class="page-link">&raquo;</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                              <ul class="todo-list">
+                                <li>
+                                  <!-- drag handle -->
+                                  <span class="handle">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                  </span>
+                                  <!-- checkbox -->
+                                  <input type="checkbox" value="" name="">
+                                  <!-- todo text -->
+                                  <span class="text">طراحی یک قالب زیبا</span>
+                                  <!-- Emphasis label -->
+                                  <small class="badge badge-danger"><i class="fa fa-clock-o"></i> 2 دقیقه</small>
+                                  <!-- General tools such as edit or delete-->
+                                  <div class="tools">
+                                    <i class="fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <span class="handle">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                  </span>
+                                  <input type="checkbox" value="" name="">
+                                  <span class="text">رسپانسیو کردن قالب مورد نظر</span>
+                                  <small class="badge badge-info"><i class="fa fa-clock-o"></i> 4 ساعت</small>
+                                  <div class="tools">
+                                    <i class="fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <span class="handle">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                  </span>
+                                  <input type="checkbox" value="" name="">
+                                  <span class="text">ارائه قالب برای استفاده بقیه</span>
+                                  <small class="badge badge-warning"><i class="fa fa-clock-o"></i> 1 روز</small>
+                                  <div class="tools">
+                                    <i class="fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <span class="handle">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                  </span>
+                                  <input type="checkbox" value="" name="">
+                                  <span class="text">بهینه سازی بخش های بوجود اومده</span>
+                                  <small class="badge badge-success"><i class="fa fa-clock-o"></i> 3 روز</small>
+                                  <div class="tools">
+                                    <i class="fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <span class="handle">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                  </span>
+                                  <input type="checkbox" value="" name="">
+                                  <span class="text">چک کردن پیام ها و نوتیفیکیشن ها</span>
+                                  <small class="badge badge-primary"><i class="fa fa-clock-o"></i> 1 هفته</small>
+                                  <div class="tools">
+                                    <i class="fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                  </div>
+                                </li>
+                                <li>
+                                  <span class="handle">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                  </span>
+                                  <input type="checkbox" value="" name="">
+                                  <span class="text">طراحی صفحه ایمیل جدید</span>
+                                  <small class="badge badge-secondary"><i class="fa fa-clock-o"></i> 1 ماه</small>
+                                  <div class="tools">
+                                    <i class="fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer ">
+                              <button type="button" class="btn btn-outline-dark float-right"><i class="fa fa-plus"></i> جدید</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6" id="mycardcon">
+                            <div class="card direct-chat direct-chat-primary card-dark" >
+                                <div class="card-header">
+                                  <h3 class="card-title">گفتگو</h3>
+                  
+                                  <div class="card-tools text-left">
+                                    <span data-toggle="tooltip" title="3 پیام جدید" class="badge badge-primary">3</span>
+                                    <button type="button" class="btn btn-tool btncol" data-widget="collapse">
+                                      <i class="fa fa-minus"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool" data-toggle="tooltip" title="مخاصبین"
+                                      data-widget="chat-pane-toggle">
+                                      <i class="fa fa-comments"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool btnclose"><i class="fa fa-times"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body" id="mycollaps">
+                                  <!-- Conversations are loaded here -->
+                                  <div class="direct-chat-messages">
+                                    <!-- Message. Default to the left -->
+                                    <div class="direct-chat-msg">
+                                      <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name float-left">محمدرضا</span>
+                                        <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                                      </div>
+                                      <!-- /.direct-chat-info -->
+                                      <img class="direct-chat-img" src="../images/avatar.png" alt="message user image">
+                                      <!-- /.direct-chat-img -->
+                                      <div class="direct-chat-text">
+                                        سلام وقت بخیر پروژه در چه وضعیتی هست؟
+                                      </div>
+                                      <!-- /.direct-chat-text -->
+                                    </div>
+                                    <!-- /.direct-chat-msg -->
+                  
+                                    <!-- Message to the right -->
+                                    <div class="direct-chat-msg right">
+                                      <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name float-right">کسری</span>
+                                        <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                                      </div>
+                                      <!-- /.direct-chat-info -->
+                                      <img class="direct-chat-img" src="../images/img/pp2.jpg" alt="message user image">
+                                      <!-- /.direct-chat-img -->
+                                      <div class="direct-chat-text">
+                                          سلام دارم روش کار میکنم
+                                      </div>
+                                      <!-- /.direct-chat-text -->
+                                    </div>
+                                    <!-- /.direct-chat-msg -->
+                  
+                                    <!-- Message. Default to the left -->
+                                    <div class="direct-chat-msg">
+                                      <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name float-left">محمدرضا</span>
+                                        <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
+                                      </div>
+                                      <!-- /.direct-chat-info -->
+                                      <img class="direct-chat-img" src="../images/avatar.png" alt="message user image">
+                                      <!-- /.direct-chat-img -->
+                                      <div class="direct-chat-text">
+                                         خوبه اگر مشکلی داشتی با من در ارتباط باش 
+                                      </div>
+                                      <!-- /.direct-chat-text -->
+                                    </div>
+                                    <!-- /.direct-chat-msg -->
+                  
+                                    <!-- Message to the right -->
+                                    <div class="direct-chat-msg right">
+                                      <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name float-right">کسری</span>
+                                        <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
+                                      </div>
+                                      <!-- /.direct-chat-info -->
+                                      <img class="direct-chat-img" src="../images/img/pp2.jpg" alt="message user image">
+                                      <!-- /.direct-chat-img -->
+                                      <div class="direct-chat-text">
+                                         مرسی اره حتما
+                                      </div>
+                                      <!-- /.direct-chat-text -->
+                                    </div>
+                                    <!-- /.direct-chat-msg -->
+                  
+                                  </div>
+
+                                  <!--/.direct-chat-messages-->
+                                  <div class="direct-chat-contacts">
+                                    <ul class="contacts-list">
+                                      <li>
+                                        <a href="#">
+                                            <div class="text-right">
+                                            <img class="contacts-list-img" style="width: 45px; height: 45px;" src="../images/img/avatar5.png">
+
+                                            </div>          
+                                          <div class="contacts-list-info ">
+                                            <span class="contacts-list-name">
+                                               <span class="">علی حسینی</span>
+                                              <small class="contacts-list-date float-left ml-1">1400/05/01</small>
+                                            </span>
+                                            <span class="contacts-list-msg">تا حالا کجا بودی  ؟ ...</span>
+                                          </div>
+                                          <!-- /.contacts-list-info -->
+                                        </a>
+                                      </li>
+                                      <!-- End Contact Item -->
+                                      <li>
+                                        <a href="#">
+                                          <p>
+                                          <img class=" contacts-list-img contactpos" style="width: 45px; height: 45px;" src="../images/img/avatar2.png">
+                                          </p>
+                                          <div class="contacts-list-info">
+                                            <span class="contacts-list-name">
+                                              سارا فرهانی
+                                              <small class="contacts-list-date float-left ml-1">2/23/2021</small>
+                                            </span>
+                                            <span class="contacts-list-msg">فردا قرار ملاقات داریم</span>
+                                          </div>
+                                          <!-- /.contacts-list-info -->
+                                        </a>
+                                      </li>
+                                      <!-- End Contact Item -->
+                                      <li>
+                                        <a href="#">
+                                          <img class="contacts-list-img" style="width: 45px; height: 45px;" src="../images/img/pp2.jpg">
+                  
+                                          <div class="contacts-list-info">
+                                            <span class="contacts-list-name">
+                                               کسری احمدی
+                                              <small class="contacts-list-date float-left ml-1">2/20/2021</small>
+                                            </span>
+                                            <span class="contacts-list-msg">پروژه در چه وضعیتی هست؟؟؟</span>
+                                          </div>
+                                          <!-- /.contacts-list-info -->
+                                        </a>
+                                      </li>
+                                      <!-- End Contact Item -->
+                                      <li>
+                                        <a href="#">
+                                          <img class="contacts-list-img d-flex justify-content-end" style="width: 45px; height: 45px;" src="../images/img/pp5.jpg">
+                  
+                                          <div class="contacts-list-info">
+                                            <span class="contacts-list-name">
+                                              رحمت موسوی
+                                              <small class="contacts-list-date float-left ml-1">2/10/2021</small>
+                                            </span>
+                                            <span class="contacts-list-msg">حالت چطورهه !...</span>
+                                          </div>
+                                          <!-- /.contacts-list-info -->
+                                        </a>
+                                      </li>
+                                      <!-- End Contact Item -->
+                                      <li>
+                                        <a href="#">
+                                          <img class="contacts-list-img" style="width: 45px; height: 45px;" src="../images/p23.jpeg">
+                  
+                                          <div class="contacts-list-info">
+                                            <span class="contacts-list-name">
+                                               امیر فلاحی
+                                              <small class="contacts-list-date float-left ml-1">1/27/2021</small>
+                                            </span>
+                                            <span class="contacts-list-msg">سلام کجایی؟؟؟</span>
+                                          </div>
+                                          <!-- /.contacts-list-info -->
+                                        </a>
+                                      </li>
+                                      <!-- End Contact Item -->
+                                      <li>
+                                        <a href="#">
+                                          <img class="contacts-list-img" style="width: 45px; height: 45px;" src="../images/p55.jpeg">
+                  
+                                          <div class="contacts-list-info">
+                                            <span class="contacts-list-name">
+                                               محمد رحیمی
+                                              <small class="contacts-list-date float-left ml-1">1/4/2021</small>
+                                            </span>
+                                            <span class="contacts-list-msg">باشه قسمت فوتر رو میزنم</span>
+                                          </div>
+                                          <!-- /.contacts-list-info -->
+                                        </a>
+                                      </li>
+                                      <!-- End Contact Item -->
+                                    </ul>
+                                    <!-- /.contacts-list -->
+                                  </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer mt-3">
+                                  <form action="#" method="post">
+                                    <div class="input-group">
+                                      <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+                                      <span class="input-group-append">
+                                        <button type="button" class="btn btn-primary">Send</button>
+                                      </span>
+                                    </div>
+                                  </form>
+                                </div>
+                                <!-- /.card-footer-->
+                              </div>
+                        </div>
+                        
+                        </div>
+                        <div class="row mb-5 mt-2">
+                          <div class="col-lg-6 ">
+                            <input id="inlineExampleAlt" class="datepicker-demo p-2 mb-1 bg-success-gradient border-0" style="width: 230px !important;"/>
+                            <div class="inline-example"  ></div>
+                          </div>
+                        </div>
+              <!--/.direct-chat -->
+                    </div>
+          <!-- /.row -->
+                </div>
+            </div><!-- /.container-fluid -->
+    </section>
+
+     <!-- Footer  -->
+     <footer class=" py-4 foot1" >
+      <div class="container text-center">
+        <h2 class="text-white text-capitalize text-center" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+          Project Management Panel  
+        </h2>
+        <div class="mt-5 d-flex justify-content-end">
+          <a href="https://t.me/mohamadreza_h7" target="_blank">
+            <i class="fab fa-telegram-plane ml-3 text-white px-2" style="font-size: 35px;"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-rss ml-3 text-white px-2" style="font-size: 35px;"></i>
+          </a>
+          <a href="https://www.instagram.com/mohamadreza__h7" target="_blank">
+            <i class="fab fa-instagram ml-3 text-white px-2" style="font-size: 35px;"></i>
+          </a>
+          <a href="https://accounts.google.com/m.rezahossini@gmail.com" target="_blank">
+            <i class="fab fa-google ml-3 text-white px-2" style="font-size: 35px;"></i>
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook-f ml-3 text-white px-2" style="font-size: 28px;"></i>
+          </a>
+        </div>
+        <p class="text-light d-flex justify-content-end text-capitalize mt-1" style="font-family: sans-serif;">designed by m.R hoseini | powered by bootstrap</p>
+      </div>
+    </footer>
+    <!-- End of Footer  -->
+
+
+      
+ 
+
+    
+  <!-- jQuery -->
+  <script src="../jquery-3.5.1.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../bootstrap.min.js"></script> 
+ 
+
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+  
+  <!-- AdminLTE App -->
+  <script src="../scripts/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../scripts/demo.js"></script>
+  <script src="../scripts/messagePage.js"></script>
+  <script src="../scripts/persian-date.js"></script>
+  <script src="../scripts/persian-datepicker.js"></script>
+<script src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+  <script src="../scripts/calenders.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.fa.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/persian-datepicker.css"/>
+
+
+    <script src="https://kit.fontawesome.com/b8c6d4072d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="85be87bd-602b-46de-8ae2-f877199d2e40";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+<body>
+    
+    <!-- Navigation -->
+        <nav class="navbar navbar-expand-md">
+            <button class="navbar-toggler nav-button1 mb-2" data-toggle="collapse" data-target="#mynav">
+                <div class="line1 bg-dark"></div>
+                <div class="line2 bg-dark"></div>
+                <div class="line3 bg-dark"></div>
+            </button>
+            <div class="navbar-collapse collapse" id="mynav">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Sidebar -->
+                            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+                                <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">Dashboard</a>       
+                                <div class="bottom-border pb-3">
+                                    <img src="../images/avatar.png" class="rounded-circle ml-3" style="width: 50px;" alt="">
+                                    <a class="text-white" href="../Pages/Profile-Page.html">محمدرضا حسینی</a>
+                                </div>
+                                <ul class="nav-bar list-unstyled flex-column mt-4">
+                                    <li class="nav-item current user-select-none">
+                                        <a href="" class="nav-link text-white p-3 mb-2 ">
+                                            <i class="fas fa-home fa-lg ml-3"></i>داشبورد
+                                        </a>
+                                    </li>
+                                    <li class="nav-item sidebar-link">
+                                        <a href="../Pages/Profile-Page.html" class="nav-link text-white p-3 mb-2">
+                                            <i class="fas fa-user fa-lg ml-3"></i>پروفایل
+                                        </a>
+                                    </li>
+                                    <li class="nav-item sidebar-link">
+                                        <a href="../Pages/chart.html" class="nav-link text-white p-3 mb-2">
+                                            <i class="fas fa-chart-bar fa-lg ml-3"></i>نمودار ها
+                                        </a>
+                                    </li>
+                                    <li class="nav-item sidebar-link">
+                                        <a href="../Pages/Tables.html" class="nav-link text-white p-3 mb-2">
+                                            <i class="fas fa-table fa-lg ml-3"></i>جدول ها
+                                        </a>
+                                    </li>
+                                    <li class="nav-item sidebar-link">
+                                        <a href="../Pages/Calender.html" class="nav-link text-white p-3 mb-2">
+                                          <i class="far fa-calendar-alt fa-lg ml-3"></i>تقویم کاری
+                                        </a>
+                                    </li>
+                                    <li class="nav-item sidebar-link">
+                                        <a href="../Pages/Message.html" class="nav-link text-white p-3 mb-2">
+                                            <i class="fas fa-envelope fa-lg ml-3"></i>پیام ها
+                                        </a>
+                                    </li>
+                                    <li class="nav-item sidebar-link">
+                                        <a href="../Pages/Sales.html" class="nav-link text-white p-3 mb-2">
+                                            <i class="fas fa-shopping-cart fa-lg ml-3"></i>فروش
+                                        </a>
+                                    </li>
+                                    <li class="nav-item sidebar-link">
+                                        <a href="" class="nav-link text-white p-3 mb-2">
+                                            <i class="fas fa-wrench fa-lg ml-3"></i>تنظیمات
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>  
+                        <!-- End of Sidebar -->
+
+                        <!-- Topnav -->
+                            <div class="col-xl-10 col-lg-9 col-md-8 fixed-top mr-auto bg-dark py-2 top-navbar">
+                                <div class="row mb-0 mt-2">
+                                    <div class="col-md-4 ">
+                                        <h4 class="text-light"><span class="brand-h user-select-none">داشبورد</span></h4>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <form class="my-4 my-md-0" action="" >
+                                            <div class="input-group">
+                                                <button class="btn btn-white search-button">
+                                                    <i class="fas fa-search text-danger"></i>
+                                                </button>
+                                                <input type="text" placeholder="جستجو..." class="form-control search-input text-white">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="navbar-nav flex-row justify-content-center">
+                                            <li class="nav-item  px-4 px-md-0">
+                                                <a href="#" class="nav-link " data-toggle="dropdown">
+                                                    <i class="fas fa-comment fa-lg text-muted"></i>
+                                                    <span class="badge badge-primary badg-bell">10</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item dropdown px-4 px-md-0">
+                                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                                    <i class="fas fa-bell fa-lg text-muted"></i>
+                                                    <span class="badge badge-warning badg-bell">15</span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-left">
+                                                    <span class="dropdown-item dropdown-header text-center">15 نوتیفیکیشن</span>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">
+                                                     <div class="text-right"> <i class="fa fa-envelope ml-2 fa-lg "></i> 4 پیام جدید</div>
+                                                      <div class=" text-muted text-sm" style="font-size: 12px;">3 دقیقه</div>
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">
+                                                      <div class="text-right"><i class="fa fa-users ml-2 fa-lg "></i> 8 درخواست دوستی</div>
+                                                      <div class=" text-muted text-sm" style="font-size: 12px;">12 ساعت</div>
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">
+                                                      <div class="text-right"><i class="fa fa-file ml-2 fa-lg "></i> 3 گزارش جدید</div>
+                                                      <div class=" text-muted text-sm" style="font-size: 12px;">2 روز</div>
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <button  class="btn btn-outline-secondary ml-1">مشاهده همه نوتیفیکیشن</button>
+                                                  </div>
+                                            </li>
+                                            <li class="nav-item mr-md-auto px-4 px-md-0 exit">
+                                                <a href="#logoutmodal" data-toggle="modal" class="nav-link">
+                                                    <i class="fas fa-sign-out-alt fa-lg text-danger"></i>
+                                                </a>
+                                            
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Topnav -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <!-- End of Navigation -->
+
+    <!-- Modal -->
+        <div class="modal fade" id="logoutmodal" data-backdrop="static">
+            <div class="modal-dialog bg-black">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>آیا میخاهید خارج شوید؟</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted">در صورت خروج ، برای دسترسی به پنل باید مجددا وارد شوید</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+                        <a href="../index.html"><button id="logout-btn" class="btn btn-danger">خارج میشوم</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End of Modal -->
+
+    <!-- Card -->
+        <section class="sec1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+                        <div class="row pt-md-5 mt-md-2 mb-5">
+                            <!-- card 1 -->
+                            <div class="col-lg-3 col-md-6 p-2">
+                                <div class="card card-common ">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-secondary">
+                                               <h5>فروش</h5>
+                                               <h5 class="mt-4">۳۰ میلیون</h5> 
+                                            </div>
+                                            <i class="fas fa-shopping-cart text-danger fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-secondary text-center">
+                                        <a href="#" class="small-box-footer  text-muted ">اطلاعات بیشتر <i class="fa fa-arrow-circle-left fa-lg"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End of card 1 -->
+                            <!-- card 2 -->
+                            <div class="col-lg-3 col-md-6 p-2">
+                                <div class="card card-common">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-secondary">
+                                               <h5>هزینه</h5>
+                                               <h5 class="mt-4">۵ میلیون</h5> 
+                                            </div>
+                                            <i class="fas fa-money-bill-alt text-success fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-secondary text-center">
+                                        <a href="#" class="small-box-footer  text-muted ">اطلاعات بیشتر <i class="fa fa-arrow-circle-left fa-lg"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End of card 2 -->
+                            <!-- card 3 -->
+                            <div class="col-lg-3 col-md-6 p-2">
+                                <div class="card card-common">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-secondary">
+                                               <h5>کاربران</h5>
+                                               <h5 class="mt-4">۵۰۰۰۰</h5> 
+                                            </div>
+                                            <i class="fas fa-users text-info fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-secondary text-center">
+                                        <a href="#" class="small-box-footer  text-muted ">اطلاعات بیشتر <i class="fa fa-arrow-circle-left fa-lg"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End of card 3 -->
+                            <!-- card 4 -->
+                            <div class="col-lg-3 col-md-6 p-2">
+                                <div class="card card-common">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="text-secondary">
+                                               <h5>بازدید</h5>
+                                               <h5 class="mt-4">۱۰۰۰۰</h5> 
+                                            </div>
+                                            <i class="fas fa-chart-line text-danger fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-secondary text-center">
+                                        <a href="#" class="small-box-footer  text-muted ">اطلاعات بیشتر <i class="fa fa-arrow-circle-left fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of card 4 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- End of Card -->
+
+    <!-- Progress / Tasklist -->
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+                        <div class="row">
+                            <!-- Progress -->
+                            <div class="col-lg-6">
+                                <div class="bg-dark p-4 text-white rounded">
+                                    <h4 class="mb-4">پروژه ها</h4>
+                                    <!-- projects -->
+                                    <h6 class="mb-2 mt-4">کتابخانه آنلاین</h6>
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: 85%;">۸۵%</div>
+                                    </div>
+                                    <!-- end of projects -->
+                                    <!-- projects -->
+                                    <h6 class="mb-2 mt-4">اپلیکیشن موبایل</h6>
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar progress-bar-striped font-weight-bold bg-primary" style="width: 25%;">۲۵%</div>
+                                    </div>
+                                    <!-- end of projects -->
+                                    <!-- projects -->
+                                    <h6 class="mb-2 mt-4">وب سرویس</h6>
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: 55%;">۵۵%</div>
+                                    </div>
+                                    <!-- end of projects -->
+                                </div>
+                            </div>
+                            <!-- End of Progress -->
+                            <!-- Tasklist -->
+                            <div class="col-lg-6">
+                                <h4 class="text-muted p-3 mb-3">تسک ها</h4>
+                                <!-- task 1 -->
+                                <div class="container-fluid bg-white">
+                                    <div class="row py-3 mb-3 align-items-center task-border">
+                                        <div class="col-1">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                        <div class="col-9">آماده کردن سمت بک اند</div>
+                                        <div class="col-1">
+                                            <a data-toggle="tooltip" data-placement="top" data-html="true" title="<h6>ویرایش</h6>" href="">
+                                            <i class="fas fa-edit text-success"></i>
+                                            </a>
+                                        </div>
+                                        <div class="col-1">
+                                            <a data-toggle="tooltip" data-placement="top" data-html="true" title="<h6>حذف</h6>" href="">
+                                            <i class="fas fa-trash text-danger"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of task 1 -->
+                                <!-- task 2-->
+                                <div class="container-fluid bg-white">
+                                    <div class="row py-3 mb-4 align-items-center task-border">
+                                        <div class="col-1">
+                                            <input type="checkbox">
+                                        </div>
+                                        <div class="col-9">توسعه برای سیستم عامل اندروید</div>
+                                        <div class="col-1">
+                                            <a data-toggle="tooltip" data-placement="top" data-html="true" title="<h6>ویرایش</h6>" href="">
+                                            <i class="fas fa-edit text-success"></i>
+                                            </a>
+                                        </div>
+                                        <div class="col-1">
+                                            <a data-toggle="tooltip" data-placement="top" data-html="true" title="<h6>حذف</h6>" href="">
+                                            <i class="fas fa-trash text-danger"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of task 2-->
+                                <!-- task 3-->
+                                <div class="container-fluid bg-white">
+                                    <div class="row py-3 mb-4 align-items-center task-border">
+                                        <div class="col-1">
+                                            <input type="checkbox">
+                                        </div>
+                                        <div class="col-9">راه اندازی سرور ها</div>
+                                        <div class="col-1">
+                                            <a data-toggle="tooltip" data-placement="top" data-html="true" title="<h6>ویرایش</h6>" href="">
+                                            <i class="fas fa-edit text-success"></i>
+                                            </a>
+                                        </div>
+                                        <div class="col-1">
+                                            <a data-toggle="tooltip" data-placement="top" data-html="true" title="<h6>حذف</h6>" href="">
+                                            <i class="fas fa-trash text-danger"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of task 3-->
+
+                            </div>
+                            <!-- End of Tasklist -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- End of Progress / Tasks -->
+
+    <!-- tables -->
+    <section>
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+                    <div class="row">
+                        <div class="col-lg-6 mb-3 mb-lg-0">
+                            <h4 class="text-muted text-center mb-3">پرداختی ها</h4>
+                            <table class="table table-hover table-dark text-center t-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>نام</th>
+                                        <th>مبلغ</th>
+                                        <th>تاریخ</th>
+                                        <th>وضعیت</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>۱</th>
+                                        <th>محمد</th>
+                                        <th>۵ میلیون</th>
+                                        <th>۱۱ تیر</th>
+                                        <th><span class="badge w-75 py-2 badge-success">پرداخت شده</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>۲</th>
+                                        <th>محمدرضا</th>
+                                        <th>۷ میلیون</th>
+                                        <th>۱۹ بهمن</th>
+                                        <th><span class="badge w-75 py-2 badge-danger">رد شده</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>۳</th>
+                                        <th>احمد</th>
+                                        <th>۱۰ میلیون</th>
+                                        <th>۱۷ دی</th>
+                                        <th><span class="badge w-75 py-2 badge-warning">انتظار</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>۴</th>
+                                        <th>فاطمه</th>
+                                        <th>۹ میلیون</th>
+                                        <th>۱۰ فروردین</th>
+                                        <th><span class="badge w-75 py-2 badge-success">پرداخت شده</span></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Pagination -->
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a href="" class="page-link py-2 px-3">&laquo;</a>
+                                    </li>
+                                    <li class="page-item ">
+                                        <a href="" class="page-link py-2 px-3 ">۳</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="" class="page-link py-2 px-3">۲</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a href="" class="page-link py-2 px-3">۱</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="" class="page-link py-2 px-3">&raquo;</a>
+                                    </li>
+                                </ul>
+                            <!-- End of Pagination -->
+
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="text-muted text-center mb-3">تیکت ها اخیر</h4>
+                            <table class="table table-striped text-center t-hover bg-light">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>نام</th>
+                                        <th>تاریخ</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>۱</th>
+                                        <th>محمد</th>
+                                        <th>۱۱ تیر</th>
+                                        <th><button class="btn btn-outline-info btn-sm">پاسخ</button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>۲</th>
+                                        <th>علی</th>
+                                        <th>۱۵ آبان</th>
+                                        <th><button class="btn btn-outline-info btn-sm">پاسخ</button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>۳</th>
+                                        <th>محمدرضا</th>
+                                        <th>۱۹ بهمن</th>
+                                        <th><button class="btn btn-outline-info btn-sm">پاسخ</button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>۴</th>
+                                        <th>رضا</th>
+                                        <th>۱۱ اردیبهشت</th>
+                                        <th><button class="btn btn-outline-info btn-sm">پاسخ</button></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Pagination -->
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a href="" class="page-link py-2 px-3">&laquo;</a>
+                                    </li>
+                                    <li class="page-item ">
+                                        <a href="" class="page-link py-2 px-3 ">۳</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="" class="page-link py-2 px-3">۲</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a href="" class="page-link py-2 px-3">۱</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="" class="page-link py-2 px-3">&raquo;</a>
+                                    </li>
+                                </ul>
+                            <!-- End of Pagination -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of tables -->
+
+    <!-- Activities & quickpost -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+                    <div class="row">
+                        <!-- Activities -->
+                        <div class="col-lg-7">
+                            <h4 class="text-muted mb-4 text-center">فعالیت های اخیر</h4>
+                            <div id="myaccordian">
+                                <!-- Card 1 -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button class="btn btn-block btn-outline-dark text-right" data-toggle="collapse" data-target="#collapse1">
+                                            <img src="../images/p1.jpg" alt="" class="ml-2 rounded" style="width: 50px; height: 50px;">
+                                            محمدرضا یک گفتگوی جدید ایجاد کرد
+                                        </button>
+                                    </div>
+                                    <div class="collapse" data-parent="#myaccordian" id="collapse1">
+                                        <div class="card-body">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 1 -->
+
+                                <!-- Card 2 -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button class="btn btn-block btn-outline-dark text-right" data-toggle="collapse" data-target="#collapse2">
+                                            <img src="../images/p2.jpg" alt="" class="ml-2 rounded" style="width: 50px; height: 50px;">
+                                            علی یک گفتگوی جدید ایجاد کرد
+                                        </button>
+                                    </div>
+                                    <div class="collapse" data-parent="#myaccordian" id="collapse2">
+                                        <div class="card-body">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 2 -->
+
+                                <!-- Card 3 -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button class="btn btn-block btn-outline-dark text-right" data-toggle="collapse" data-target="#collapse3">
+                                            <img src="../images/p3.jpg" alt="" class="ml-2 rounded" style="width: 50px; height: 50px;">
+                                            زهرا یک گفتگوی جدید ایجاد کرد
+                                        </button>
+                                    </div>
+                                    <div class="collapse" data-parent="#myaccordian" id="collapse3">
+                                        <div class="card-body">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 3 -->
+
+                                <!-- Card 4 -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button class="btn btn-block btn-outline-dark text-right" data-toggle="collapse" data-target="#collapse4">
+                                            <img src="../images/p1.jpg" alt="" class="ml-2 rounded" style="width: 50px; height: 50px;">
+                                            ماهان یک گفتگوی جدید ایجاد کرد
+                                        </button>
+                                    </div>
+                                    <div class="collapse" data-parent="#myaccordian" id="collapse4">
+                                        <div class="card-body">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 4 -->
+
+                                <!-- Card 5 -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button class="btn btn-block btn-outline-dark text-right" data-toggle="collapse" data-target="#collapse5">
+                                            <img src="../images/p2.jpg" alt="" class="ml-2 rounded" style="width: 50px; height: 50px;">
+                                            حسین یک گفتگوی جدید ایجاد کرد
+                                        </button>
+                                    </div>
+                                    <div class="collapse active" data-parent="#myaccordian" id="collapse5">
+                                        <div class="card-body">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 5 -->
+                            </div>
+                        </div>
+                        <!-- End of Activities -->
+
+                        <!-- Quickpost -->
+                        <div class="col-lg-5 mt-5 mb-5">
+                            <div class="card rounded ">
+                                <div class="card-body">
+                                    <h4 class="text-muted text-center mb-4">پست جدید</h4>
+                                    <ul class="list-inline text-center py-3">
+                                        <li class="list-inline-item">
+                                            <a href="">
+                                                <i class="fas fa-pencil-alt text-success"></i>
+                                                <span class="h6 text-muted">وضعیت</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item px-3">
+                                            <a href="">
+                                                <i class="fas fa-camera text-info"></i>
+                                                <span class="h6 text-muted">تصویر</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="">
+                                                <i class="fas fa-map-marker text-danger"></i>
+                                                <span class="h6 text-muted">مکان</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control py-2 mb-3" placeholder="یه چیزی بنویس...">
+                                            <button class="btn btn-block btn-outline-dark py-2 mb-5">پست کن</button>
+                                        </div>
+                                    </form>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <input id="inlineExampleAlt" class="datepicker-demo p-1 mb-1 bg-secondary border-0 text-white" style="width:225px !important"/>
+                                            <div class="inline-example "  ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Quickpost -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Activities & quickpost -->
+
+     <!-- Footer  -->
+     <footer class=" py-4 foot1" >
+        <div class="container text-center">
+          <h2 class="text-white text-capitalize text-center" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+            Project Management Panel  
+          </h2>
+          <div class="mt-5 d-flex justify-content-end">
+            <a href="https://t.me/mohamadreza_h7" target="_blank">
+              <i class="fab fa-telegram-plane ml-3 text-white px-2" style="font-size: 35px;"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-rss ml-3 text-white px-2" style="font-size: 35px;"></i>
+            </a>
+            <a href="https://www.instagram.com/mohamadreza__h7" target="_blank">
+              <i class="fab fa-instagram ml-3 text-white px-2" style="font-size: 35px;"></i>
+            </a>
+            <a href="https://accounts.google.com/m.rezahossini@gmail.com" target="_blank">
+              <i class="fab fa-google ml-3 text-white px-2" style="font-size: 35px;"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <i class="fab fa-facebook-f ml-3 text-white px-2" style="font-size: 28px;"></i>
+            </a>
+          </div>
+          <p class="text-light d-flex justify-content-end text-capitalize mt-1" style="font-family: sans-serif;">designed by m.R hoseini | powered by bootstrap</p>
+        </div>
+      </footer>
+      <!-- End of Footer  -->
+  
+
+    <!-- Optional Javascripts -->
+    <!-- <script src="../auth.js"></script> -->
+    <script src="../scripts/jquery-3.5.1.slim.min.js"></script>
+    <script src="../scripts/popper.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/persian-date.js"></script>
+    <script src="../scripts/persian-datepicker.js"></script>
+
+    <!-- function of callender -->
+  <script src="../scripts/calenders.js"></script>
+    
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+         });
+    </script>
+    <script>
+        //Change Navbar Toggler Button
+        const navbtn = document.querySelector('.nav-button1');
+    
+        navbtn.addEventListener('click' , (e) => {
+            e.preventDefault();
+            navbtn.classList.toggle('change');
+        })
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyDtP3_5YpLcjJhhdSMWEhbpgH0jXDY3ZKc",
+        authDomain: "dashboard-firebase-7ddb6.firebaseapp.com",
+        projectId: "dashboard-firebase-7ddb6",
+        storageBucket: "dashboard-firebase-7ddb6.appspot.com",
+        messagingSenderId: "278566414527",
+        appId: "1:278566414527:web:1974cfe8b1b0419f5e3e0a",
+        measurementId: "G-5FLL50XXF1"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    // make auth & firestore refrences
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    //update firestore setting
+    db.settings({ timestampsInSnapshots: true });
+    </script>
+
+</body>
+</html>

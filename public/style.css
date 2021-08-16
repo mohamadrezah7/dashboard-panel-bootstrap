@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: yekan;
+    src: url("./fonts/iranyekanwebbold.ttf") format("truetype");
+}
+
+*{
+    font-family: Quicksand;
+}
+
+body {
+	background: linear-gradient(45deg, #e9805f, #e71565, #23a6d5, #520475);
+	background-size: 400% 400%;
+    background-position: cover;
+	animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.form-group input{
+    border: none;
+}
+
+.card{
+    background-color: white !important;
+    border-radius: 17px !important;
+    border: none;
+    box-shadow: 15px 10px 10px rgb(49, 42, 49);
+    
+}
+
+.form-group input:focus,
+.form-group input:active{
+    box-shadow: none;
+}
+
+.form-group{
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 5px rgb(196, 190, 190);
+}
+
+.form-group:hover{
+    transform: translateX(3px);
+    transition:  0.4s;
+}
+
+
+.btn-grad {background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)}
+.btn-grad {
+    margin: 9px;
+   padding: 9px 30px;
+   text-align: center;
+   text-transform: capitalize;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+   transition:all 0.8s;
+ }
+
+ .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+   transform: translateY(2px);
+   box-shadow: 0px 8px 8px rgb(196, 190, 190);
+   transition: all 0.5s;
+ }
+
+
+
+/* .logbtn{
+    background-image: linear-gradient(to left , #70e1f5,#17c0eb,#ffd194);
+    border-radius: 30px;
+}
+
+
+
+.logbtn:hover{
+    transform: translateY(2px);
+    box-shadow: 0px 8px 8px rgb(196, 190, 190);
+    transition: all 0.5s;
+} */
+
+
+.fade{
+    transition: all 0.4s !important;
+}
+.btnsign{
+    transition: all 0.5s !important;
+}
+
+.btnsign:hover{
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%) !important;
+    color: white !important;
+    transition: all 0.5s !important;
+
+}
+.btnsign:focus{
+    box-shadow: none !important;
+}
+
+.forgetp{
+    transition: all 0.5s !important;    
+}
+
+.forgetp:hover{
+    color: rgb(31, 5, 5) !important;
+    text-shadow: 2px 3px 4px black;
+}
+
+/* Hiding the checkbox, but allowing it to be focused */
+.badgebox
+{
+    opacity: 0;
+}
+
+.badgebox + .badge
+{
+    /* Move the check mark away when unchecked */
+    text-indent: -999999px;
+    /* Makes the badge's width stay the same checked and unchecked */
+	width: 27px;
+}
+
+.badgebox:focus + .badge
+{
+    /* Set something to make the badge looks focused */
+    /* This really depends on the application, in my case it was: */
+    
+    /* Adding a light border */
+    box-shadow: inset 0px 0px 5px;
+    /* Taking the difference out of the padding */
+}
+
+.badgebox:checked + .badge
+{
+    /* Move the check mark back when checked */
+	text-indent: 0;
+}
+
